@@ -1,0 +1,19 @@
+# Bytecode do Python
+__pycache__/
+*.pyc
+
+# Ambiente virtual
+venv/
+env/
+
+# Arquivos de editor e IDE
+.vscode/
+.idea/
+
+# Arquivos de logs e dados
+*.log
+*.sqlite3
+db.sqlite3
+
+# Arquivos de credenciais e senhas
+*.env
