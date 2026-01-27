@@ -1,4 +1,4 @@
-from . import operacoes, validadores, gerenciar_arquivos
+from . import operacoes, gerenciar_arquivos
 
 def ver_historico():
     historico = gerenciar_arquivos.arquivo_r()
