@@ -69,6 +69,47 @@ def exibir_resultado_operacao(operacao_realizada):
     resultado = list(operacao_realizada.values())
     print(f"\n{operacao[0]} = {resultado[0]}")
 
+def realizar_operacao(operacao_usuario: str):
+    numeros_operadores_separados = []
+    primeiro_elemento_operacao = operacao_usuario[0]
+        
+    valores_da_operacao = ""
+    if primeiro_elemento_operacao in "+-":
+        valores_da_operacao = primeiro_elemento_operacao
+        operacao_usuario = operacao_usuario[1:]
+
+    for elemento in operacao_usuario:
+        if elemento.isdigit() or elemento == ".":
+            valores_da_operacao += elemento
+        else:
+            numeros_operadores_separados.append(valores_da_operacao)
+            numeros_operadores_separados.append(elemento)
+            valores_da_operacao = ""
+    numeros_operadores_separados.append(valores_da_operacao)
+        
+    if len(numeros_operadores_separados) == 3:
+        valores = [float(numeros_operadores_separados[0]), float(numeros_operadores_separados[2])]
+        operador = numeros_operadores_separados[1]
+        resultado_operacao = chamar_operacao(valores, operador)
+        return resultado_operacao
+        
+    resultado_operacao_anterior = None
+    for valor in range(1, len(numeros_operadores_separados), 2):
+        if resultado_operacao_anterior or resultado_operacao_anterior == 0:
+            primeiro_valor = resultado_operacao_anterior
+        else:
+            primeiro_valor = float(numeros_operadores_separados[valor-1])
+
+        segundo_valor = float(numeros_operadores_separados[valor+1])
+        total_numeros = [primeiro_valor, segundo_valor]
+        operador_equacao = numeros_operadores_separados[valor]
+        resultado_operacao_anterior = chamar_operacao(total_numeros, operador_equacao)
+
+        if valor == len(numeros_operadores_separados) - 2:
+            break
+    resultado_final_operacao = resultado_operacao_anterior
+    return resultado_final_operacao
+
 def chamar_operacao(numeros: list, simbolo_operacao: str):
     if simbolo_operacao == "+":
         resultado_operacao = operacoes.soma(numeros)
