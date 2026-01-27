@@ -3,12 +3,8 @@ from . import operacoes, validadores, gerenciar_arquivos
 def ver_historico():
     historico = gerenciar_arquivos.arquivo_r()
     if not historico:
-        print("O HISTÓRICO DE OPERAÇÕES ESTÁ VAZIO.\n")
-    else:
-        print("\nHISTÓRICO DE OPERAÇÕES:\n")
-        for produto in historico:
-            for chave, valor in produto.items():
-                print(f"{chave} = {valor}\n")
+        return None
+    return historico
 
 def apagar_historico():
     gerenciar_arquivos.arquivo_w([])
