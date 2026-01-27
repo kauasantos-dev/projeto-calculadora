@@ -1,5 +1,5 @@
 from tkinter import Button, Tk
-from display_resultado import DisplayResultadoOperacoes
+from .display_resultado import DisplayResultadoOperacoes
 
 class NumerosCalculadora:
     def __init__(self, aplicacao: Tk, display_resultados: DisplayResultadoOperacoes):
@@ -177,6 +177,23 @@ class NumerosCalculadora:
 
         self.numero0.place(
             relx=0.1,
+            rely=0.60,
+            relwidth=0.14,
+            relheight=0.09
+        )
+
+        self.igual = Button(
+            self.aplicacao,
+            text="=", font=("Arial", 20),
+            bg="orange",
+            fg="white",
+            bd=1,
+            relief="raised",
+            command=lambda: self.display_resultados.inserir("=")
+        )
+
+        self.igual.place(
+            relx=0.40,
             rely=0.60,
             relwidth=0.14,
             relheight=0.09
