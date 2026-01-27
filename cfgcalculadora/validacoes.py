@@ -1,5 +1,5 @@
 import re
-from interface.botoes_ponto_igual import realizar_operacao
+from .uteis import realizar_operacao
 
 def validar_operacao(valor, operacao_atual):
     if valor is None:
