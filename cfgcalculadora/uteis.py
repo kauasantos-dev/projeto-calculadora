@@ -1,5 +1,4 @@
-from cfgcalculadora import gerenciar_arquivos
-from cfgcalculadora import validadores
+from . import operacoes, validadores, gerenciar_arquivos
 
 def ver_historico():
     historico = gerenciar_arquivos.arquivo_r()
@@ -69,3 +68,18 @@ def exibir_resultado_operacao(operacao_realizada):
     operacao = list(operacao_realizada.keys())
     resultado = list(operacao_realizada.values())
     print(f"\n{operacao[0]} = {resultado[0]}")
+
+def chamar_operacao(numeros: list, simbolo_operacao: str):
+    if simbolo_operacao == "+":
+        resultado_operacao = operacoes.soma(numeros)
+    
+    elif simbolo_operacao == "-":
+        resultado_operacao = operacoes.subtracao(numeros)
+    
+    elif simbolo_operacao == "×":
+        resultado_operacao = operacoes.multiplicacao(numeros)
+    
+    elif simbolo_operacao == "÷":
+        resultado_operacao = operacoes.divisao(numeros)
+    
+    return resultado_operacao
