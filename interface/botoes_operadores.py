@@ -1,5 +1,5 @@
 from tkinter import Button, Tk
-from display_resultado import DisplayResultadoOperacoes
+from .display_resultado import DisplayResultadoOperacoes
 
 class OperadoresCalculadora:
     def __init__(self, aplicacao: Tk, display_resultados: DisplayResultadoOperacoes):
