@@ -1,39 +1,34 @@
-from tkinter import Button, Tk
+from customtkinter import CTkButton, CTk
 
 class BotoesPontoIgual:
-    def __init__(self, aplicacao: Tk):
+    def __init__(self, aplicacao: CTk):
         self.aplicacao = aplicacao
 
     def botoes_ponto_igual(self):
-        self.ponto = Button(
-            self.aplicacao,
+        self.ponto = CTkButton(
+            master=self.aplicacao,
             text=".",
             font=("Arial", 20),
-            bg="orange",
-            fg="white",
-            bd=1,
-            relief="raised"
+            fg_color="orange",
         )
 
         self.ponto.place(
-            relx=0.25,
-            rely=0.60,
+            x=100,
+            y=100,
             relwidth=0.14,
             relheight=0.09
         )
 
-        self.igual = Button(
-            self.aplicacao,
+        self.igual = CTkButton(
+            master=self.aplicacao,
             text="=", font=("Arial", 20),
-            bg="orange",
-            fg="white",
-            bd=1,
-            relief="raised"
+            font=("Arial", 20),
+            fg_color="orange"
         )
 
         self.igual.place(
-            relx=0.40,
-            rely=0.60,
+            x=100,
+            y=100,
             relwidth=0.14,
             relheight=0.09
         )
