@@ -1,5 +1,5 @@
 from customtkinter import CTk, CTkFrame, StringVar, CTkLabel
-from cfgcalculadora.validadores import validar_operacao
+from cfgcalculadora.validacoes import validar_operacao
 
 class DisplayResultadoOperacoes:
     def __init__(self, aplicacao: CTk):
