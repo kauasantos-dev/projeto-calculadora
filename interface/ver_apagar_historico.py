@@ -1,5 +1,5 @@
 from tkinter import Button, Tk
-from display_resultado import DisplayResultadoOperacoes
+from .display_resultado import DisplayResultadoOperacoes
 
 class GerenciarHistorico:
     def __init__(self, aplicacao: Tk, display_resultados: DisplayResultadoOperacoes):
@@ -28,7 +28,7 @@ class GerenciarHistorico:
             self.aplicacao,
             text="Apagar Histórico", 
             font=("Arial", 12),
-            background="red", 
+            background="orange", 
             fg="white",
             bd=1,
             relief="raised"
