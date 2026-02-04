@@ -40,8 +40,6 @@ class NumerosCalculadora:
             text="9", 
             font=("Arial", 16),
             fg_color="white", 
-            width=300,
-            height=200,
             command=lambda: self.display_resultados.inserir(9)
         )
         self.numero9.place(
