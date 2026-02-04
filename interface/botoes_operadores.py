@@ -16,8 +16,8 @@ class OperadoresCalculadora:
         )
 
         self.divisao.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.6,
             relwidth=0.14,
             relheight=0.09
         )
@@ -31,8 +31,8 @@ class OperadoresCalculadora:
         )
 
         self.multiplicacao.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.8,
             relwidth=0.14,
             relheight=0.09
         )
@@ -46,8 +46,8 @@ class OperadoresCalculadora:
         )
 
         self.subtracao.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.7,
             relwidth=0.14,
             relheight=0.09
         )
@@ -61,8 +61,8 @@ class OperadoresCalculadora:
         )
 
         self.soma.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.6,
             relwidth=0.14,
             relheight=0.09
         )
@@ -76,8 +76,8 @@ class OperadoresCalculadora:
         )
 
         self.raiz_quadrada.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.9,
             relwidth=0.14,
             relheight=0.09
         )
@@ -91,8 +91,8 @@ class OperadoresCalculadora:
         )
 
         self.potencia.place(
-            x=100,
-            y=100,
+            relx=0.6,
+            rely=0.95,
             relwidth=0.14,
             relheight=0.09
         )
