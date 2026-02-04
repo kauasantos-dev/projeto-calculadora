@@ -16,8 +16,8 @@ class NumerosCalculadora:
         )
 
         self.numero7.place(
-            x=300,
-            y=200,
+            relx=0.2,
+            rely=0.2,
             relwidth=0.2,
             relheight=0.01
        )
@@ -31,8 +31,10 @@ class NumerosCalculadora:
         )
 
         self.numero8.place(
-            x=300,
-            y=200
+            relx=0.2,
+            rely=0.4,
+            relwidth=0.2,
+            relheight=0.2
         )
 
         self.numero9 = CTkButton(
@@ -43,8 +45,10 @@ class NumerosCalculadora:
             command=lambda: self.display_resultados.inserir(9)
         )
         self.numero9.place(
-            x=300,
-            y=200
+            relx=0.2,
+            rely=0.2,
+            relwidth=0.2,
+            relheight=0.3
         )
 
         self.numero4 = CTkButton(
@@ -56,8 +60,10 @@ class NumerosCalculadora:
         )
 
         self.numero4.place(
-            x=300,
-            y=200,
+            relx=0.2,
+            rely=0.2,
+            relwidth=0.2,
+            relheight=0.5
         )
 
         self.numero5 = CTkButton(
@@ -69,8 +75,10 @@ class NumerosCalculadora:
         )
 
         self.numero5.place(
-            x=300,
-            y=200
+            relx=0.4,
+            rely=0.7,
+            relwidth=0.2,
+            relheight=0.2
         )
 
         self.numero6 = CTkButton(
@@ -82,8 +90,10 @@ class NumerosCalculadora:
             )
         
         self.numero6.place(
-            x=300,
-            y=200,
+            relx=0.2,
+            rely=0.2,
+            relwidth=0.2,
+            relheight=0.2
         )
 
         self.numero1 = CTkButton(
@@ -94,8 +104,10 @@ class NumerosCalculadora:
             command=lambda: self.display_resultados.inserir(1)
         )
         self.numero1.place(
-            x=300,
-            y=200
+            relx=0.2,
+            rely=0.2,
+            relwidht=0.2,
+            relheight=0.2
         )
 
         self.numero2 = CTkButton(
@@ -106,8 +118,10 @@ class NumerosCalculadora:
             command=lambda: self.display_resultados.inserir(2)
         )
         self.numero2.place(
-            x=300,
-            y=200
+            relx=0.2,
+            rely=0.2,
+            relwidth=0.3,
+            relheight=0.3
         )
 
         self.numero3 = CTkButton(
@@ -118,8 +132,10 @@ class NumerosCalculadora:
             command=lambda: self.display_resultados.inserir(3)
         )
         self.numero3.place(
-            x=300,
-            y=200
+            relx=0.3,
+            rely=0.3,
+            relwidth=0.3,
+            relheight=0.3
         )
 
         self.numero0 = CTkButton(
@@ -131,6 +147,8 @@ class NumerosCalculadora:
         )
 
         self.numero0.place(
-            x=300,
-            y=200
+            relx=0.3,
+            rely=0.3,
+            relwidth=0.3,
+            relheight=0.3
         )
