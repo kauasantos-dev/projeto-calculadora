@@ -1,5 +1,5 @@
 from customtkinter import CTkButton, CTk
-from display_resultado import DisplayResultadoOperacoes
+from .display_resultado import DisplayResultadoOperacoes
 
 class OperadoresCalculadora:
     def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
@@ -10,89 +10,101 @@ class OperadoresCalculadora:
         self.divisao = CTkButton(
             master=self.aplicacao, 
             text="÷", 
+            text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir("÷")
         )
 
         self.divisao.place(
-            relx=0.6,
-            rely=0.6,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.8,
+            rely=0.39,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.multiplicacao = CTkButton(
             master=self.aplicacao, 
             text="×", 
-            font=("Arial", 25), 
-            fg_color="orange", 
+            text_color='white',
+            font=("Arial", 25),
+            fg_color="orange",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir("×")
         )
 
         self.multiplicacao.place(
-            relx=0.6,
-            rely=0.8,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.67,
+            rely=0.39,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.subtracao = CTkButton(
             master=self.aplicacao, 
             text="-", 
+            text_color='white',
             font=("Arial", 25),
-            fg_color="orange", 
+            fg_color="orange",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir("-")
         )
 
         self.subtracao.place(
-            relx=0.6,
-            rely=0.7,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.8,
+            rely=0.3,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.soma = CTkButton(
             master=self.aplicacao, 
             text="+", 
+            text_color='white',
             font=("Arial", 25),
-            fg_color="orange", 
+            fg_color="orange",
+            corner_radius=30, 
             command=lambda: self.display_resultados.inserir("+")
         )
 
         self.soma.place(
-            relx=0.6,
-            rely=0.6,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.67,
+            rely=0.3,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.raiz_quadrada = CTkButton(
             master=self.aplicacao, 
             text="√ⁿ", 
-            font=("Arial", 18),
+            text_color='white',
+            font=("Arial", 25),
             fg_color="orange",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir("√ⁿ")
         )
 
         self.raiz_quadrada.place(
-            relx=0.6,
-            rely=0.9,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.8,
+            rely=0.48,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.potencia = CTkButton(
             master=self.aplicacao, 
             text="xⁿ", 
-            font=("Arial", 18),
-            fg_color="orange", 
+            text_color='white',
+            font=("Arial", 25),
+            fg_color="orange",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir("xⁿ")
         )
 
         self.potencia.place(
-            relx=0.6,
-            rely=0.95,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.67,
+            rely=0.48,
+            relwidth=0.12,
+            relheight=0.08
         )
