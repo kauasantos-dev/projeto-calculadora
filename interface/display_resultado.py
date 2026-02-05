@@ -1,5 +1,5 @@
 from customtkinter import CTk, CTkFrame, StringVar, CTkLabel
-from cfgcalculadora.validacoes import validar_operacao
+from cfgcalculadora import validacoes
 
 class DisplayResultadoOperacoes:
     def __init__(self, aplicacao: CTk):
@@ -9,10 +9,8 @@ class DisplayResultadoOperacoes:
 
     def frame_resultado_operacoes(self):
         self.frame_resultados = CTkFrame(
-            self.aplicacao, 
-            bg="#222020",
-            highlightbackground="white",
-            highlightthickness=2
+            master=self.aplicacao, 
+            fg_color="black",
         )
 
         self.frame_resultados.place(
@@ -25,12 +23,10 @@ class DisplayResultadoOperacoes:
         self.display = CTkLabel(
             self.frame_resultados,
             textvariable=self.valor_display,
-            bg="black",
-            fg="white",
+            fg_color="black",
+            text_color="white",
             anchor="e",
-            font=("Arial", 20),
-            highlightbackground="white",
-            highlightthickness=1
+            font=("Arial", 30),
         )
 
         self.display.place(
@@ -40,7 +36,7 @@ class DisplayResultadoOperacoes:
     
     def inserir(self, valor):
         valor_atual = self.valor_display.get()
-        resultado_validacao_operacao = validar_operacao(valor, valor_atual)
+        resultado_validacao_operacao = validacoes.validar_operacao(valor, valor_atual)
         if resultado_validacao_operacao:
             self.valor_display.set(resultado_validacao_operacao)
         else:
