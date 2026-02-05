@@ -1,5 +1,5 @@
 from customtkinter import CTkButton, CTk
-from display_resultado import DisplayResultadoOperacoes
+from .display_resultado import DisplayResultadoOperacoes
 
 class NumerosCalculadora:
     def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
@@ -9,146 +9,166 @@ class NumerosCalculadora:
     def valores(self):
         self.numero7 = CTkButton(
             master=self.aplicacao, 
-            text="7", 
-            font=("Arial", 16),
-            fg_color="white",
+            text="7",
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(7)
         )
 
         self.numero7.place(
-            relx=0.2,
-            rely=0.2,
-            relwidth=0.2,
-            relheight=0.01
+            relx=0.1,
+            rely=0.3,
+            relwidth=0.12,
+            relheight=0.08
        )
         
         self.numero8 = CTkButton(
             master=self.aplicacao, 
             text="8", 
-            font=("Arial", 16),
-            fg_color="white",
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(8)
         )
 
         self.numero8.place(
-            relx=0.2,
-            rely=0.4,
-            relwidth=0.2,
-            relheight=0.2
+            relx=0.23,
+            rely=0.3,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero9 = CTkButton(
             master=self.aplicacao, 
             text="9", 
-            font=("Arial", 16),
-            fg_color="white", 
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(9)
         )
         self.numero9.place(
-            relx=0.2,
-            rely=0.2,
-            relwidth=0.2,
-            relheight=0.3
+            relx=0.36,
+            rely=0.3,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero4 = CTkButton(
             master=self.aplicacao, 
-            text="4", 
-            font=("Arial", 16), 
-            fg_color="white",
+            text="4",
+            text_color='white',
+            font=("Arial", 20), 
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(4)
         )
 
         self.numero4.place(
-            relx=0.2,
-            rely=0.2,
-            relwidth=0.2,
-            relheight=0.5
+            relx=0.1,
+            rely=0.39,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero5 = CTkButton(
             master=self.aplicacao, 
             text="5", 
-            font=("Arial", 16),
-            fg_color="white",
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(5)
         )
 
         self.numero5.place(
-            relx=0.4,
-            rely=0.7,
-            relwidth=0.2,
-            relheight=0.2
+            relx=0.23,
+            rely=0.39,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero6 = CTkButton(
             self.aplicacao, 
             text="6", 
-            font=("Arial", 16),
-            fg_color="white",
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(6)
             )
         
         self.numero6.place(
-            relx=0.2,
-            rely=0.2,
-            relwidth=0.2,
-            relheight=0.2
+            relx=0.36,
+            rely=0.39,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero1 = CTkButton(
             master=self.aplicacao, 
-            text="1", 
-            font=("Arial", 16), 
-            fg_color="white",
+            text="1",
+            text_color='white',
+            font=("Arial", 20), 
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(1)
         )
         self.numero1.place(
-            relx=0.2,
-            rely=0.2,
-            relwidht=0.2,
-            relheight=0.2
+            relx=0.1,
+            rely=0.48,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero2 = CTkButton(
             master=self.aplicacao, 
-            text="2", 
-            font=("Arial", 16), 
-            fg_color="black",
+            text="2",
+            text_color='white', 
+            font=("Arial", 20), 
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(2)
         )
         self.numero2.place(
-            relx=0.2,
-            rely=0.2,
-            relwidth=0.3,
-            relheight=0.3
+            relx=0.23,
+            rely=0.48,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero3 = CTkButton(
             master=self.aplicacao, 
             text="3", 
-            font=("Arial", 16),
-            fg_color="white",
+            text_color='white',
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(3)
         )
         self.numero3.place(
-            relx=0.3,
-            rely=0.3,
-            relwidth=0.3,
-            relheight=0.3
+            relx=0.36,
+            rely=0.48,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.numero0 = CTkButton(
             master=self.aplicacao, 
-            text="0", 
-            font=("Arial", 16),
-            fg_color="white",
+            text="0",
+            text_color='white', 
+            font=("Arial", 20),
+            fg_color="#1C1C1C",
+            corner_radius=30,
             command=lambda: self.display_resultados.inserir(0)
         )
 
         self.numero0.place(
-            relx=0.3,
-            rely=0.3,
-            relwidth=0.3,
-            relheight=0.3
+            relx=0.1,
+            rely=0.57,
+            relwidth=0.12,
+            relheight=0.08
         )
