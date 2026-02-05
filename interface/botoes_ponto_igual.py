@@ -6,29 +6,33 @@ class BotoesPontoIgual:
 
     def botoes_ponto_igual(self):
         self.ponto = CTkButton(
-            master=self.aplicacao,
-            text=".",
-            font=("Arial", 20),
+            master=self.aplicacao, 
+            text=".", 
+            text_color='white',
+            font=("Arial", 25),
             fg_color="orange",
+            corner_radius=30
         )
 
         self.ponto.place(
-            x=100,
-            y=100,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.67,
+            rely=0.57,
+            relwidth=0.12,
+            relheight=0.08
         )
 
         self.igual = CTkButton(
-            master=self.aplicacao,
-            text="=", font=("Arial", 20),
-            font=("Arial", 20),
-            fg_color="orange"
+            master=self.aplicacao, 
+            text="=", 
+            text_color='white',
+            font=("Arial", 25),
+            fg_color="orange",
+            corner_radius=30
         )
 
         self.igual.place(
-            x=100,
-            y=100,
-            relwidth=0.14,
-            relheight=0.09
+            relx=0.8,
+            rely=0.57,
+            relwidth=0.12,
+            relheight=0.08
         )
