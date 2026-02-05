@@ -13,6 +13,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir("÷")
         )
@@ -30,6 +31,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir("×")
         )
@@ -47,6 +49,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir("-")
         )
@@ -64,6 +67,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30, 
             command=lambda: self.display_resultados.inserir("+")
         )
@@ -81,6 +85,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir("√ⁿ")
         )
@@ -98,6 +103,7 @@ class OperadoresCalculadora:
             text_color='white',
             font=("Arial", 25),
             fg_color="orange",
+            hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir("xⁿ")
         )

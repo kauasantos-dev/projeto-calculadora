@@ -14,6 +14,7 @@ class NumerosCalculadora:
             font=("Arial", 20),
             fg_color="#1C1C1C",
             corner_radius=30,
+            hover_color='orange',
             command=lambda: self.display_resultados.inserir(7)
         )
 
@@ -30,6 +31,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(8)
         )
@@ -47,6 +49,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(9)
         )
@@ -63,6 +66,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20), 
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(4)
         )
@@ -80,6 +84,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(5)
         )
@@ -97,6 +102,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(6)
             )
@@ -114,6 +120,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20), 
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(1)
         )
@@ -130,6 +137,7 @@ class NumerosCalculadora:
             text_color='white', 
             font=("Arial", 20), 
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(2)
         )
@@ -146,6 +154,7 @@ class NumerosCalculadora:
             text_color='white',
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(3)
         )
@@ -162,6 +171,7 @@ class NumerosCalculadora:
             text_color='white', 
             font=("Arial", 20),
             fg_color="#1C1C1C",
+            hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(0)
         )
