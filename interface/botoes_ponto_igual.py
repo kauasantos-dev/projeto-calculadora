@@ -1,8 +1,10 @@
+from .display_resultado import DisplayResultadoOperacoes
 from customtkinter import CTkButton, CTk
 
 class BotoesPontoIgual:
-    def __init__(self, aplicacao: CTk):
+    def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
         self.aplicacao = aplicacao
+        self.display_resultados = display_resultados
 
     def botoes_ponto_igual(self):
         self.ponto = CTkButton(
@@ -12,7 +14,8 @@ class BotoesPontoIgual:
             font=("Arial", 25),
             fg_color="orange",
             hover_color='#1C1C1C',
-            corner_radius=30
+            corner_radius=30,
+            command=lambda: self.display_resultados.inserir(".")
         )
 
         self.ponto.place(
@@ -29,7 +32,8 @@ class BotoesPontoIgual:
             font=("Arial", 25),
             fg_color="orange",
             hover_color='#1C1C1C',
-            corner_radius=30
+            corner_radius=30,
+            command=lambda: self.display_resultados.inserir("=")
         )
 
         self.igual.place(
