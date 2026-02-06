@@ -11,7 +11,7 @@ class BotoesPontoIgual:
             master=self.aplicacao, 
             text=".", 
             text_color='white',
-            font=("Arial", 25),
+            font=("Arial", 35),
             fg_color="orange",
             hover_color='#1C1C1C',
             corner_radius=30,
