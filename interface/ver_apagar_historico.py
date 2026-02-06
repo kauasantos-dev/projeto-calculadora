@@ -12,8 +12,8 @@ class GerenciarHistorico:
             text='Apagar Histórico',
             text_color='white',
             font=('Arial', 16),
-            fg_color='orange',
-            hover_color='#1C1C1C', 
+            fg_color='#360909',
+            hover_color="#620707", 
             corner_radius=30
         )
 
