@@ -36,7 +36,7 @@ class DisplayResultadoOperacoes:
     
     def inserir(self, valor):
         valor_atual = self.valor_display.get()
-        valor_atual_ajustado = valor_atual.replace('xⁿ', "^").replace('√ⁿ', '√')
+        valor_atual_ajustado = valor_atual.replace('xⁿ', "^").replace('ⁿ√', '√')
         
         resultado_validacao_operacao = validacoes.validar_operacao(valor, valor_atual_ajustado)
         if resultado_validacao_operacao:
