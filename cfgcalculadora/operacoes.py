@@ -18,3 +18,9 @@ def multiplicacao(lista_numeros):
     for numero in lista_numeros:
         mult *= numero
     return mult
+
+def potenciacao(lista_numeros):
+    return lista_numeros[0] ** lista_numeros[1]
+
+def radiciacao(lista_numeros):
+    return lista_numeros[1] ** (1 / lista_numeros[0])
