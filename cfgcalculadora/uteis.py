@@ -79,4 +79,10 @@ def chamar_operacao(numeros: list, simbolo_operacao: str):
     elif simbolo_operacao == "÷":
         resultado_operacao = operacoes.divisao(numeros)
     
+    elif simbolo_operacao == "√":
+        resultado_operacao = operacoes.radiciacao(numeros)
+    
+    elif simbolo_operacao == "^":
+        resultado_operacao = operacoes.potenciacao(numeros)
+    
     return resultado_operacao
