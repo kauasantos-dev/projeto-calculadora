@@ -1,10 +1,16 @@
 from . import operacoes, gerenciar_arquivos
 
 def ver_historico():
-    historico = gerenciar_arquivos.arquivo_r()
-    if not historico:
-        return None
-    return historico
+    historico_salvo = gerenciar_arquivos.arquivo_r()
+    historico_formatado = ""
+    
+    if not historico_salvo:
+       return "O histórico de operações está vazio."
+    for operacao in historico_salvo:
+        for operacao_salva, resultado in operacao.items():
+            historico_formatado += f"{operacao_salva} = {resultado}\n\n"
+
+    return historico_formatado
 
 def apagar_historico():
     historico_salvo = gerenciar_arquivos.arquivo_r()
