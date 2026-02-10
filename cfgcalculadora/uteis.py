@@ -7,7 +7,11 @@ def ver_historico():
     return historico
 
 def apagar_historico():
+    historico_salvo = gerenciar_arquivos.arquivo_r()
+    if not historico_salvo:
+        return False
     gerenciar_arquivos.arquivo_w([])
+    return True
 
 def salvar_operacao_no_historico(operacao_efetuada, resultado):
     nova_operacao = {operacao_efetuada: resultado}
