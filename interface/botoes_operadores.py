@@ -3,12 +3,12 @@ from .display_resultado import DisplayResultadoOperacoes
 
 class OperadoresCalculadora:
     def __init__(self, janela_principal: CTk, display_resultados: DisplayResultadoOperacoes):
-        self.aplicacao = janela_principal
+        self.janela_principal = janela_principal
         self.display_resultados = display_resultados
 
     def operadores_aritmeticos(self):
         self.divisao = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="÷", 
             text_color='white',
             font=("Arial", 25),
@@ -26,7 +26,7 @@ class OperadoresCalculadora:
         )
 
         self.multiplicacao = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="×", 
             text_color='white',
             font=("Arial", 25),
@@ -44,7 +44,7 @@ class OperadoresCalculadora:
         )
 
         self.subtracao = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="-", 
             text_color='white',
             font=("Arial", 25),
@@ -62,7 +62,7 @@ class OperadoresCalculadora:
         )
 
         self.soma = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="+", 
             text_color='white',
             font=("Arial", 25),
@@ -80,7 +80,7 @@ class OperadoresCalculadora:
         )
 
         self.raiz_quadrada = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="ⁿ√", 
             text_color='white',
             font=("Arial", 25),
@@ -98,7 +98,7 @@ class OperadoresCalculadora:
         )
 
         self.potencia = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="xⁿ", 
             text_color='white',
             font=("Arial", 25),
