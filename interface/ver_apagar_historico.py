@@ -1,12 +1,14 @@
 from customtkinter import CTkButton, CTk, CTkToplevel, CTkLabel, CTkFrame
 from .display_resultado import DisplayResultadoOperacoes
+from cfgcalculadora import uteis
+from tkinter import messagebox
 
 class GerenciarHistorico:
     def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
         self.aplicacao = aplicacao
         self.display_resultados = display_resultados
     
-    def historico_operacoes(self):
+    def botoes_gerenciar_historico(self):
         self.apagar_historico = CTkButton(
             master=self.aplicacao,
             text='Apagar Histórico',
@@ -14,7 +16,8 @@ class GerenciarHistorico:
             font=('Arial', 16),
             fg_color='#360909',
             hover_color="#620707", 
-            corner_radius=30
+            corner_radius=30,
+            command=self.mostrar_mensagem_historico_apagado
         )
 
         self.apagar_historico.place(
@@ -92,3 +95,10 @@ class GerenciarHistorico:
             rely=0.165,
             relwidth=0.87
         )
+
+    def mostrar_mensagem_historico_apagado(self):
+        historico_apagado = uteis.apagar_historico()
+        if historico_apagado:
+            messagebox.showinfo(title="Histórico de Operações", message="Histórico apagado com sucesso!")
+        else:
+            messagebox.showwarning(title="Histórico de Operações", message="O histórico de operações já está vazio.")
