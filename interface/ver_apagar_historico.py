@@ -64,15 +64,15 @@ class GerenciarHistorico:
         )
     
     def exibir_historico(self):
-        self.ver_historico = CTkToplevel(self.janela_principal, fg_color='black')
-        self.ver_historico.title('Histórico de Operações')
-        self.ver_historico.geometry('950x580')
-        self.ver_historico.resizable(True, True)
-        self.ver_historico.minsize(width=320, height=350)
-        self.ver_historico.maxsize(width=1220, height=780)
+        self.janela_exibir_historico = CTkToplevel(self.janela_principal, fg_color='black')
+        self.janela_exibir_historico.title('Histórico de Operações')
+        self.janela_exibir_historico.geometry('950x580')
+        self.janela_exibir_historico.resizable(True, True)
+        self.janela_exibir_historico.minsize(width=320, height=350)
+        self.janela_exibir_historico.maxsize(width=1220, height=780)
         
         self.cabecalho = CTkLabel(
-            master=self.ver_historico,
+            master=self.janela_exibir_historico,
             text='Histórico de Operações',
             text_color='white',
             font=('Arial', 30),
@@ -85,7 +85,7 @@ class GerenciarHistorico:
         )
     
         self.linha_horizontal = CTkFrame(
-            master=self.ver_historico,
+            master=self.janela_exibir_historico,
             fg_color='orange',
             height=4,
             corner_radius=30
@@ -97,7 +97,7 @@ class GerenciarHistorico:
         )
 
         self.mostrar_historico = CTkTextbox(
-            master=self.ver_historico,
+            master=self.janela_exibir_historico,
             fg_color='black',
             text_color='white',
             font=('Arial', 20)
