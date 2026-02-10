@@ -79,7 +79,7 @@ class OperadoresCalculadora:
             relheight=0.08
         )
 
-        self.raiz_quadrada = CTkButton(
+        self.radiciacao = CTkButton(
             master=self.janela_principal, 
             text='ⁿ√', 
             text_color='white',
@@ -90,14 +90,14 @@ class OperadoresCalculadora:
             command=lambda: self.display_resultados.inserir('ⁿ√')
         )
 
-        self.raiz_quadrada.place(
+        self.radiciacao.place(
             relx=0.8,
             rely=0.48,
             relwidth=0.12,
             relheight=0.08
         )
 
-        self.potencia = CTkButton(
+        self.potenciacao = CTkButton(
             master=self.janela_principal, 
             text='xⁿ', 
             text_color='white',
@@ -108,7 +108,7 @@ class OperadoresCalculadora:
             command=lambda: self.display_resultados.inserir('xⁿ')
         )
 
-        self.potencia.place(
+        self.potenciacao.place(
             relx=0.67,
             rely=0.48,
             relwidth=0.12,
