@@ -86,13 +86,13 @@ class GerenciarHistorico:
     
         self.linha_horizontal = CTkFrame(
             master=self.ver_historico,
-            fg_color='white',
+            fg_color='orange',
             height=4,
             corner_radius=30
         )
         self.linha_horizontal.place(
             relx=0.061,
-            rely=0.165,
+            rely=0.167,
             relwidth=0.87
         )
 
