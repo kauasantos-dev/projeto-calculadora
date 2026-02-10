@@ -15,7 +15,7 @@ class GerenciarHistorico:
             text_color='white',
             font=('Arial', 16),
             fg_color='#360909',
-            hover_color="#620707", 
+            hover_color='#620707', 
             corner_radius=30,
             command=self.mostrar_mensagem_historico_apagado
         )
@@ -29,10 +29,10 @@ class GerenciarHistorico:
 
         self.ver_historico = CTkButton(
             master=self.janela_principal,
-            text="Ver Histórico", 
+            text='Ver Histórico', 
             text_color='white',
-            font=("Arial", 16),
-            fg_color="orange", 
+            font=('Arial', 16),
+            fg_color='orange', 
             hover_color='#1C1C1C',
             corner_radius=30,
             command=self.exibir_historico
@@ -47,10 +47,10 @@ class GerenciarHistorico:
 
         self.apagar_display = CTkButton(
             master=self.janela_principal,
-            text="Limpar",
+            text='Limpar',
             text_color='white',
-            font=("Arial", 16),
-            fg_color="orange",
+            font=('Arial', 16),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(None)
@@ -117,6 +117,6 @@ class GerenciarHistorico:
     def mostrar_mensagem_historico_apagado(self):
         historico_apagado = uteis.apagar_historico()
         if historico_apagado:
-            messagebox.showinfo(title="Histórico de Operações", message="Histórico apagado com sucesso!")
+            messagebox.showinfo(title='Histórico de Operações', message='Histórico apagado com sucesso!')
         else:
-            messagebox.showwarning(title="Histórico de Operações", message="O histórico de operações já está vazio.")
+            messagebox.showwarning(title='Histórico de Operações', message='O histórico de operações já está vazio.')
