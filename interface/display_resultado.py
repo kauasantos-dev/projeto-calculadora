@@ -2,14 +2,14 @@ from customtkinter import CTk, CTkFrame, StringVar, CTkLabel
 from cfgcalculadora import validacoes
 
 class DisplayResultadoOperacoes:
-    def __init__(self, aplicacao: CTk):
-        self.aplicacao = aplicacao
+    def __init__(self, janela_principal: CTk):
+        self.janela_principal = janela_principal
         self.valor_display = StringVar()
         self.valor_display.set("0")
 
     def frame_resultado_operacoes(self):
         self.frame_resultados = CTkFrame(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             fg_color="black",
         )
 
