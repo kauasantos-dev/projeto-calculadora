@@ -9,13 +9,13 @@ class BotoesPontoIgual:
     def botoes_ponto_igual(self):
         self.ponto = CTkButton(
             master=self.janela_principal, 
-            text=".", 
+            text='.', 
             text_color='white',
-            font=("Arial", 35),
-            fg_color="orange",
+            font=('Arial', 35),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir(".")
+            command=lambda: self.display_resultados.inserir('.')
         )
 
         self.ponto.place(
@@ -27,13 +27,13 @@ class BotoesPontoIgual:
 
         self.igual = CTkButton(
             master=self.janela_principal, 
-            text="=", 
+            text='=', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("=")
+            command=lambda: self.display_resultados.inserir('=')
         )
 
         self.igual.place(
