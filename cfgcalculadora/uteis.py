@@ -1,4 +1,4 @@
-from . import operacoes, gerenciar_arquivos
+from cfgcalculadora import operacoes, gerenciar_arquivos
 
 def ver_historico():
     historico_salvo = gerenciar_arquivos.arquivo_r()
