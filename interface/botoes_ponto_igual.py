@@ -2,13 +2,13 @@ from .display_resultado import DisplayResultadoOperacoes
 from customtkinter import CTkButton, CTk
 
 class BotoesPontoIgual:
-    def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
-        self.aplicacao = aplicacao
+    def __init__(self, janela_principal: CTk, display_resultados: DisplayResultadoOperacoes):
+        self.janela_principal = janela_principal
         self.display_resultados = display_resultados
 
     def botoes_ponto_igual(self):
         self.ponto = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text=".", 
             text_color='white',
             font=("Arial", 35),
@@ -26,7 +26,7 @@ class BotoesPontoIgual:
         )
 
         self.igual = CTkButton(
-            master=self.aplicacao, 
+            master=self.janela_principal, 
             text="=", 
             text_color='white',
             font=("Arial", 25),
