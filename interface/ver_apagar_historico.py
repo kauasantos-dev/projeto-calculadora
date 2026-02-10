@@ -9,24 +9,6 @@ class GerenciarHistorico:
         self.display_resultados = display_resultados
     
     def botoes_gerenciar_historico(self):
-        self.apagar_historico = CTkButton(
-            master=self.janela_principal,
-            text='Apagar Histórico',
-            text_color='white',
-            font=('Arial', 16),
-            fg_color='#360909',
-            hover_color='#620707', 
-            corner_radius=30,
-            command=self.mostrar_mensagem_historico_apagado
-        )
-
-        self.apagar_historico.place(
-            relx=0.1,
-            rely=0.66,
-            relwidth=0.38,
-            relheight=0.09
-        )
-
         self.ver_historico = CTkButton(
             master=self.janela_principal,
             text='Ver Histórico', 
@@ -42,6 +24,24 @@ class GerenciarHistorico:
             relx=0.67,
             rely=0.66,
             relwidth=0.25,
+            relheight=0.09
+        )
+        
+        self.apagar_historico = CTkButton(
+            master=self.janela_principal,
+            text='Apagar Histórico',
+            text_color='white',
+            font=('Arial', 16),
+            fg_color='#360909',
+            hover_color='#620707', 
+            corner_radius=30,
+            command=self.mostrar_mensagem_historico_apagado
+        )
+
+        self.apagar_historico.place(
+            relx=0.1,
+            rely=0.66,
+            relwidth=0.38,
             relheight=0.09
         )
 
