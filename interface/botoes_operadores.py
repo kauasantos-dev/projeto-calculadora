@@ -9,13 +9,13 @@ class OperadoresCalculadora:
     def operadores_aritmeticos(self):
         self.divisao = CTkButton(
             master=self.janela_principal, 
-            text="÷", 
+            text='÷', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("÷")
+            command=lambda: self.display_resultados.inserir('÷')
         )
 
         self.divisao.place(
@@ -27,13 +27,13 @@ class OperadoresCalculadora:
 
         self.multiplicacao = CTkButton(
             master=self.janela_principal, 
-            text="×", 
+            text='×', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("×")
+            command=lambda: self.display_resultados.inserir('×')
         )
 
         self.multiplicacao.place(
@@ -45,13 +45,13 @@ class OperadoresCalculadora:
 
         self.subtracao = CTkButton(
             master=self.janela_principal, 
-            text="-", 
+            text='-', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("-")
+            command=lambda: self.display_resultados.inserir('-')
         )
 
         self.subtracao.place(
@@ -63,13 +63,13 @@ class OperadoresCalculadora:
 
         self.soma = CTkButton(
             master=self.janela_principal, 
-            text="+", 
+            text='+', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30, 
-            command=lambda: self.display_resultados.inserir("+")
+            command=lambda: self.display_resultados.inserir('+')
         )
 
         self.soma.place(
@@ -81,13 +81,13 @@ class OperadoresCalculadora:
 
         self.raiz_quadrada = CTkButton(
             master=self.janela_principal, 
-            text="ⁿ√", 
+            text='ⁿ√', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("ⁿ√")
+            command=lambda: self.display_resultados.inserir('ⁿ√')
         )
 
         self.raiz_quadrada.place(
@@ -99,13 +99,13 @@ class OperadoresCalculadora:
 
         self.potencia = CTkButton(
             master=self.janela_principal, 
-            text="xⁿ", 
+            text='xⁿ', 
             text_color='white',
-            font=("Arial", 25),
-            fg_color="orange",
+            font=('Arial', 25),
+            fg_color='orange',
             hover_color='#1C1C1C',
             corner_radius=30,
-            command=lambda: self.display_resultados.inserir("xⁿ")
+            command=lambda: self.display_resultados.inserir('xⁿ')
         )
 
         self.potencia.place(
