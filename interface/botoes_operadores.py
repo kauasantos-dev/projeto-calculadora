@@ -2,8 +2,8 @@ from customtkinter import CTkButton, CTk
 from .display_resultado import DisplayResultadoOperacoes
 
 class OperadoresCalculadora:
-    def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
-        self.aplicacao = aplicacao
+    def __init__(self, janela_principal: CTk, display_resultados: DisplayResultadoOperacoes):
+        self.aplicacao = janela_principal
         self.display_resultados = display_resultados
 
     def operadores_aritmeticos(self):
