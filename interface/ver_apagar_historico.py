@@ -45,7 +45,7 @@ class GerenciarHistorico:
             relheight=0.09
         )
 
-        self.apagar_display = CTkButton(
+        self.limpar_display = CTkButton(
             master=self.janela_principal,
             text='Limpar',
             text_color='white',
@@ -56,7 +56,7 @@ class GerenciarHistorico:
             command=lambda: self.display_resultados.inserir(None)
         )
 
-        self.apagar_display.place(
+        self.limpar_display.place(
             relx=0.23,
             rely=0.57,
             relwidth=0.25,
