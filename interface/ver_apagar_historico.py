@@ -4,13 +4,13 @@ from cfgcalculadora import uteis
 from tkinter import messagebox
 
 class GerenciarHistorico:
-    def __init__(self, aplicacao: CTk, display_resultados: DisplayResultadoOperacoes):
-        self.aplicacao = aplicacao
+    def __init__(self, janela_principal: CTk, display_resultados: DisplayResultadoOperacoes):
+        self.janela_principal = janela_principal
         self.display_resultados = display_resultados
     
     def botoes_gerenciar_historico(self):
         self.apagar_historico = CTkButton(
-            master=self.aplicacao,
+            master=self.janela_principal,
             text='Apagar Histórico',
             text_color='white',
             font=('Arial', 16),
@@ -28,7 +28,7 @@ class GerenciarHistorico:
         )
 
         self.ver_historico = CTkButton(
-            master=self.aplicacao,
+            master=self.janela_principal,
             text="Ver Histórico", 
             text_color='white',
             font=("Arial", 16),
@@ -46,7 +46,7 @@ class GerenciarHistorico:
         )
 
         self.apagar_display = CTkButton(
-            master=self.aplicacao,
+            master=self.janela_principal,
             text="Limpar",
             text_color='white',
             font=("Arial", 16),
@@ -64,7 +64,7 @@ class GerenciarHistorico:
         )
     
     def exibir_historico(self):
-        self.ver_historico = CTkToplevel(self.aplicacao, fg_color='black')
+        self.ver_historico = CTkToplevel(self.janela_principal, fg_color='black')
         self.ver_historico.title('Histórico de Operações')
         self.ver_historico.geometry('950x580')
         self.ver_historico.resizable(True, True)
