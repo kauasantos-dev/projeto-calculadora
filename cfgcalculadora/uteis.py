@@ -19,21 +19,6 @@ def apagar_historico():
     gerenciar_arquivos.arquivo_w([])
     return True
 
-def salvar_operacao_no_historico(operacao_efetuada, resultado):
-    nova_operacao = {operacao_efetuada: resultado}
-
-    historico_salvo = gerenciar_arquivos.arquivo_r()
-    historico_salvo.append(nova_operacao)
-    gerenciar_arquivos.arquivo_w(historico_salvo)
-
-def historico_nova_operacao(lista_numeros, operacao, resultado):
-    for valor in range(len(lista_numeros)):
-        lista_numeros[valor] = str(lista_numeros[valor])
-
-    operacao_realizada = f" {operacao} ".join(lista_numeros)
-
-    return {operacao_realizada: resultado}
-
 def realizar_operacao(operacao_usuario: str):
     numeros_operadores_separados = []
     primeiro_elemento_operacao = operacao_usuario[0]
