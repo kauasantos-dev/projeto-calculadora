@@ -9,10 +9,10 @@ class NumerosCalculadora:
     def valores(self):
         self.numero7 = CTkButton(
             master=self.janela_principal, 
-            text="7",
+            text='7',
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             corner_radius=30,
             hover_color='orange',
             command=lambda: self.display_resultados.inserir(7)
@@ -27,10 +27,10 @@ class NumerosCalculadora:
         
         self.numero8 = CTkButton(
             master=self.janela_principal, 
-            text="8", 
+            text='8', 
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(8)
@@ -45,10 +45,10 @@ class NumerosCalculadora:
 
         self.numero9 = CTkButton(
             master=self.janela_principal, 
-            text="9", 
+            text='9', 
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(9)
@@ -62,10 +62,10 @@ class NumerosCalculadora:
 
         self.numero4 = CTkButton(
             master=self.janela_principal, 
-            text="4",
+            text='4',
             text_color='white',
-            font=("Arial", 20), 
-            fg_color="#1C1C1C",
+            font=('Arial', 20), 
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(4)
@@ -80,10 +80,10 @@ class NumerosCalculadora:
 
         self.numero5 = CTkButton(
             master=self.janela_principal, 
-            text="5", 
+            text='5', 
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(5)
@@ -98,10 +98,10 @@ class NumerosCalculadora:
 
         self.numero6 = CTkButton(
             self.janela_principal, 
-            text="6", 
+            text='6', 
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(6)
@@ -116,10 +116,10 @@ class NumerosCalculadora:
 
         self.numero1 = CTkButton(
             master=self.janela_principal, 
-            text="1",
+            text='1',
             text_color='white',
-            font=("Arial", 20), 
-            fg_color="#1C1C1C",
+            font=('Arial', 20), 
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(1)
@@ -133,10 +133,10 @@ class NumerosCalculadora:
 
         self.numero2 = CTkButton(
             master=self.janela_principal, 
-            text="2",
+            text='2',
             text_color='white', 
-            font=("Arial", 20), 
-            fg_color="#1C1C1C",
+            font=('Arial', 20), 
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(2)
@@ -150,10 +150,10 @@ class NumerosCalculadora:
 
         self.numero3 = CTkButton(
             master=self.janela_principal, 
-            text="3", 
+            text='3', 
             text_color='white',
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(3)
@@ -167,10 +167,10 @@ class NumerosCalculadora:
 
         self.numero0 = CTkButton(
             master=self.janela_principal, 
-            text="0",
+            text='0',
             text_color='white', 
-            font=("Arial", 20),
-            fg_color="#1C1C1C",
+            font=('Arial', 20),
+            fg_color='#1C1C1C',
             hover_color='orange',
             corner_radius=30,
             command=lambda: self.display_resultados.inserir(0)
