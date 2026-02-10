@@ -1,4 +1,4 @@
-from customtkinter import CTkButton, CTk, CTkToplevel, CTkLabel, CTkFrame
+from customtkinter import CTkButton, CTk, CTkToplevel, CTkLabel, CTkFrame, CTkTextbox
 from .display_resultado import DisplayResultadoOperacoes
 from cfgcalculadora import uteis
 from tkinter import messagebox
@@ -95,6 +95,24 @@ class GerenciarHistorico:
             rely=0.165,
             relwidth=0.87
         )
+
+        self.mostrar_historico = CTkTextbox(
+            master=self.ver_historico,
+            fg_color='black',
+            text_color='white',
+            font=('Arial', 20)
+        )
+        self.mostrar_historico.place(
+            relx=0.061,
+            rely=0.25,
+            relwidth=0.87,
+            relheight=0.5
+        )
+        self.mostrar_historico.insert(
+            index='0.0', 
+            text=uteis.ver_historico()
+        )
+        self.mostrar_historico.configure(state='disabled')
 
     def mostrar_mensagem_historico_apagado(self):
         historico_apagado = uteis.apagar_historico()
