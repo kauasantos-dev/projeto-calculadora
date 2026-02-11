@@ -20,24 +20,7 @@ def apagar_historico():
     return True
 
 def realizar_operacao(operacao_usuario: str):
-    numeros_e_operadores_separados = []
-    primeiro_elemento_operacao = operacao_usuario[0]
-    valores_da_operacao = ""
-
-    # Separa + ou - do início da operação, garantindo que o primeiro índice seja um número
-    if primeiro_elemento_operacao in "+-":
-        valores_da_operacao = primeiro_elemento_operacao
-        operacao_usuario = operacao_usuario[1:]
-
-    # Separa números e operadores para serem identificados individualmente na lista
-    for elemento in operacao_usuario:
-        if elemento.isdigit() or elemento == ".":
-            valores_da_operacao += elemento
-        else:
-            numeros_e_operadores_separados.append(valores_da_operacao)
-            numeros_e_operadores_separados.append(elemento)
-            valores_da_operacao = ""
-    numeros_e_operadores_separados.append(valores_da_operacao)
+    numeros_e_operadores_separados = separar_numeros_e_operadores(operacao_usuario)
     
     if len(numeros_e_operadores_separados) == 3:
         valores = [float(numeros_e_operadores_separados[0]), float(numeros_e_operadores_separados[2])]
@@ -90,3 +73,23 @@ def salvar_operacao_no_historico(operacao_efetuada, resultado):
     historico_salvo = gerenciar_arquivos.arquivo_r()
     historico_salvo.append(nova_operacao)
     gerenciar_arquivos.arquivo_w(historico_salvo)
+
+def separar_numeros_e_operadores(operacao_usuario):
+    numeros_e_operadores_separados = []
+    primeiro_elemento_operacao = operacao_usuario[0]
+    valores_da_operacao = ""
+
+    # Separa + ou - do início da operação, garantindo que o primeiro índice seja um número
+    if primeiro_elemento_operacao in "+-":
+        valores_da_operacao = primeiro_elemento_operacao
+        operacao_usuario = operacao_usuario[1:]
+
+    for elemento in operacao_usuario:
+        if elemento.isdigit() or elemento == ".":
+            valores_da_operacao += elemento
+        else:
+            numeros_e_operadores_separados.append(valores_da_operacao)
+            numeros_e_operadores_separados.append(elemento)
+            valores_da_operacao = ""
+    numeros_e_operadores_separados.append(valores_da_operacao)
+    return numeros_e_operadores_separados
