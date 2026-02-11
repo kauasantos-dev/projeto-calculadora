@@ -1,20 +1,20 @@
-# 🧮 Calculadora Modular Python com Histórico JSON
+# 🧮 Calculadora Python com Histórico
 
-Uma calculadora simples desenvolvida em Python que utiliza uma arquitetura modular para realizar operações aritméticas fundamentais. O projeto destaca o uso de manipulação de arquivos **(JSON)**, **tratamento de exceções e organização de pacotes.**
+Uma calculadora simples desenvolvida em Python, que utiliza uma arquitetura modular para realizar operações aritméticas fundamentais. A aplicação destaca-se por sua interface gráfica desenvolvida com a biblioteca **customtkinter**, pelo uso de manipulação de arquivos **JSON** e pela organização modular de seus pacotes.
 
 ---
 
 ## 📌 Funcionalidades
 
-- **➕ Operações Matemáticas:** Soma, Subtração, Multiplicação (com múltiplos números) e Divisão.
+- **➕ Operações Matemáticas:** Soma, Subtração, Multiplicação (com múltiplos números), Divisão, Potenciação e Radiciação.
 
 - **🗃️ Persistência de Dados:** Armazenamento automático de todas as operações realizadas em um arquivo .json.
 
-- **📄 Gestão de Histórico:** Funções dedicadas para visualizar e limpar o histórico de cálculos.
+- **📄 Gestão de Histórico:** Botões gráficos dedicados à visualização e limpeza do histórico de cálculos.
 
-- **✅ Validação Robusta:** Tratamento de erros para entradas inválidas (letras onde deveriam ser números) e prevenção de divisão por zero.
+- **✅ Validação de operações:** Definição de expressão regular para validar a estrutura das operações, impedindo que cálculos inválidos sejam processados e quebre o sistema.
 
-- **💻 Interface CLI:** Menu interativo amigável via terminal.
+- **🎨 Interface Gráfica:** Interface moderna contendo botões de valores numéricos, operadores aritméticos, gestão de histórico e display de exibição de cálculos e resultados.
 
 ---
 
@@ -24,7 +24,7 @@ Uma calculadora simples desenvolvida em Python que utiliza uma arquitetura modul
 
 - **Persistência:** JSON (JavaScript Object Notation)
 
-- **Módulos Internos:** `os`, `json`, `sys`
+- **Módulos Internos:** `os`, `json`, `sys`, `re`, `customtkinter`
 
 ---
 
@@ -38,10 +38,23 @@ calculadora/
 │   ├── gerenciar_arquivos.py
 │   ├── operacoes.py
 │   ├── uteis.py
-│   └── validadores.py
+│   └── validacoes.py
 │
 ├── historico/
 │   └── operacoes_salvas.json
+│
+├── imagens/
+│   ├── apagar_historico.png
+│   ├── historico_operacoes.png
+│   └── tela_principal.png
+│
+├── interface/
+│   ├── __init__.py
+│   ├── botoes_numeros.py
+│   ├── botoes_operadores.py
+│   ├── botoes_ponto_igual.py
+│   ├── display_resultado.py
+│   └── ver_apagar_historico.py
 │
 ├── .gitignore
 ├── LICENSE
@@ -71,34 +84,24 @@ cd calculadora
 python main.py
 ```
 
-**⚠️ IMPORTANTE:**  
-
-Este projeto é uma aplicação **CLI** e deve ser executado em um terminal local,
-como **Prompt de Comando** ou **PowerShell**.
-
 ---
 
 ## 📝 Exemplo de Uso
 
-Ao selecionar a operação de Soma (Opção 1), o programa solicitará os números. Você pode inserir quantos desejar e digitar qualquer letra para finalizar e obter o resultado. O log será salvo automaticamente no formato:
+### Tela principal
 
-```json
-{
-  "10 + 20 + 5": 35
-}
-```
+Ao executar o sistema, a interface gráfica será aberta em uma tela e a aplicação poderá ser utilizada.
+![Tela Principal](imagens/tela_principal.png)
 
----
+### Histórico de Operações
 
-## 🛡️ Tratamento de Erros
+O botão `Ver Histórico` cria uma nova tela que exibe todas as operações efetuadas pelo usuário.
+![Histórico de Operações](imagens/historico_operacoes.png)
 
-O sistema está preparado para lidar com:
+### Apagar Histórico de Operações
 
-- `ZeroDivisionError`: Impede falhas ao tentar dividir por zero.
-
-- `ValueError`: Captura entradas de texto quando números são esperados.
-
-- `FileNotFoundError`: Gerencia a criação automática do diretório de histórico caso ele não exista.
+O botão `Apagar Histórico` apaga todas as operações salvas no histórico e exibe **pop-ups** com mensagens informativas.
+![Apagar Histórico](imagens/apagar_historico.png)
 
 ---
 
